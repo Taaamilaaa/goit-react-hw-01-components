@@ -1,0 +1,29 @@
+.statistics {
+  width: 500px;
+  height: auto;
+  border: 1px solid rgba(105, 91, 91, 0.452);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+.statList {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  border: 1px solid rgba(105, 91, 91, 0.452);
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 30px;
+  border: 1px solid rgba(105, 91, 91, 0.452);
+  background-color: rgba(138, 128, 128, 0.226);
+}
+
+.label {
+  margin-bottom: 15px;
+}
+.percentage {
+}
