@@ -1,7 +1,8 @@
 import styles from './profileCard.module.css';
 import PropTypes from 'prop-types';
 
-export function Profile({ name, avatar, tag, location, followers, views, likes }) {
+export function Profile({ name, avatar, tag, location, stats }) {
+    const { followers, likes, views } = stats;
     return (<div className={ styles.profile}>
         <div className={styles.description}>
     <img
@@ -15,6 +16,7 @@ export function Profile({ name, avatar, tag, location, followers, views, likes }
   </div>
 
         <ul className={styles.stats}>
+            
     <li className={styles.item}>
                 <span className={styles.label}>Followers</span>
                 <span className={styles.quantity}>{ followers}</span>
