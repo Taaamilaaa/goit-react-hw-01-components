@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import styles from './statistics.module.css'
 
-
 // function randomColor() {
 //   const color = (Math.random().toString(16) + '000000')
 //     .substring(2, 8)
@@ -13,10 +12,11 @@ import styles from './statistics.module.css'
 // const bgc = randomColor();
 
 
-export function Statistics({ stats, children }) {
+export function Statistics({ title, stats }) {
   return (
     <section className={styles.statistics}>
-      {children}    
+      {title && <h2 className={styles.title}>{title}</h2>}
+        
         <ul className={styles.statList}>
         {stats.map((el) => {
           const { id, label, percentage } = el;
@@ -33,13 +33,13 @@ export function Statistics({ stats, children }) {
   );
 }
 
-Statistics.propType = {
-  children: PropTypes.element,
+Statistics.propTypes = {
+  title: PropTypes.string,
   stats: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string,
+      id: PropTypes.string.isRequired,
       label: PropTypes.string,
       percentage: PropTypes.number,
-    })
+    }),
   ),
 };
