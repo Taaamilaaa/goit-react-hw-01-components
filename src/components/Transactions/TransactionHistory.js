@@ -15,7 +15,7 @@ export function TransactionHistory({ item }) {
         <tbody className = {style.content}>
           {item.map((el) => {
             const { id, type, amount, currency } = el;
-            return (<tr key = {id}>
+            return (<tr>
             <td>{ type}</td>
             <td>{ amount}</td>
             <td>{ currency}</td>
